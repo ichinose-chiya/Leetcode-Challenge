@@ -1,4 +1,4 @@
-# [Leetcode_01-two-sum](https://leetcode.cn/problems/two-sum/)
+# [Leetcode-01_two-sum](https://leetcode.cn/problems/two-sum/)
 
 ### Description
 
