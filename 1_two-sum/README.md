@@ -56,9 +56,12 @@ public:
         int arr_size = nums.size();
 
         /* brute-force */
-        for (int i = 0; i < arr_size; i++) {
-            for (int j = i + 1; j < arr_size; j++) {
-                if (nums[i] + nums[j] == target) {
+        for (int i = 0; i < arr_size; i++)
+        {
+            for (int j = i + 1; j < arr_size; j++)
+            {
+                if (nums[i] + nums[j] == target)
+                {
                     return {i, j};
                 }
             }
@@ -87,10 +90,14 @@ public:
         int arr_size = nums.size();
 
         /* use map to optimize */
-        for (int i = 0; i < arr_size; i++) {
-            if (map.find(target - nums[i]) == map.end()) {
+        for (int i = 0; i < arr_size; i++)
+        {
+            if (map.find(target - nums[i]) == map.end())
+            {
                 map[nums[i]] = i;
-            } else {
+            }
+            else
+            {
                 return {map[target - nums[i]], i};
             }
         }

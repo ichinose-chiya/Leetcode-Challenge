@@ -17,11 +17,13 @@ public:
         last = &res;
         carry = 0;
 
-        if (l1 == nullptr || l2 == nullptr) {
+        if (l1 == nullptr || l2 == nullptr)
+        {
             goto copy_left;
         }
 
-        while (l1 != nullptr && l2 != nullptr) {
+        while (l1 != nullptr && l2 != nullptr)
+        {
             curr = new ListNode(l1->val + l2->val + carry);
             carry = curr->val / 10;
             curr->val %= 10;
@@ -33,7 +35,8 @@ public:
 
 copy_left:
         left = (l1 == nullptr ? l2 : l1);
-        while (left != nullptr) {
+        while (left != nullptr)
+        {
             curr = new ListNode(left->val + carry);
             carry = curr->val / 10;
             curr->val %= 10;
@@ -42,7 +45,8 @@ copy_left:
             left = left->next;
         }
 
-        while (carry != 0) {
+        while (carry != 0)
+        {
             curr = new ListNode(carry);
             carry = curr->val / 10;
             curr->val %= 10;
